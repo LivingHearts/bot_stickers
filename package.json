@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "bot.ts",
   "scripts": {
-    "start": "ts-node dist/bot.js",
+    "start": "ts-node src/bot.js",
     "build": "tsc"
   },
   "dependencies": {
