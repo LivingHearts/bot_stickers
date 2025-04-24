@@ -1,5 +1,5 @@
 // 🔐 Токен бота
-const TOKEN = "AAFkgfsPfTgCUftTV_pYcS1lb3L7_31mEk8"; // Замінити на свій токен
+const TOKEN = "123456789:ABCdefGhIJKlmnoPQRstuVWxyz123456789"; 
 
 // ✅ ID дозволених груп
 const ALLOWED_GROUPS = [-1002641763276, 7811456678, 846282286, 1250458483];
