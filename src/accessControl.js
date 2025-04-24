@@ -1,4 +1,4 @@
-const { ALLOWED_GROUPS, ALLOWED_USERS } = require('./config');
+import { ALLOWED_GROUPS, ALLOWED_USERS } from './config.js';
 
 const isUserAllowed = (userId) => {
   return ALLOWED_USERS.includes(userId);
@@ -8,7 +8,7 @@ const isGroupAllowed = (groupId) => {
   return ALLOWED_GROUPS.includes(groupId);
 };
 
-const checkAccess = (ctx) => {
+export const checkAccess = (ctx) => {
   const userId = ctx.from?.id;
   const chatId = ctx.chat?.id;
   const chatType = ctx.chat?.type;
@@ -65,7 +65,7 @@ const checkAccess = (ctx) => {
   return false;
 };
 
-module.exports = {
+export default {
   isUserAllowed,
   isGroupAllowed,
   checkAccess

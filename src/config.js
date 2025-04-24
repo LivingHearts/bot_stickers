@@ -1,19 +1,13 @@
 // 🔐 Токен бота
-const TOKEN = "123456789:ABCdefGhIJKlmnoPQRstuVWxyz123456789"; 
+export const TOKEN = "7980095567:AAFZRHKqYa53UY_gAId7VNit-PFhMZZ1Adc"; 
 
 // ✅ ID дозволених груп
-const ALLOWED_GROUPS = [-1002641763276, 7811456678, 846282286, 1250458483];
+export const ALLOWED_GROUPS = [-1002641763276, 7811456678, 846282286, 1250458483];
 
 // ✅ ID дозволених користувачів
-const ALLOWED_USERS = [846282286, 7811456678, 1250458483];
+export const ALLOWED_USERS = [846282286, 7811456678, 1250458483];
 
 // 🎨 Назва набору стікерів
-const STICKER_SET_NAME = "living_heart";
+export const STICKER_SET_NAME = "living_heart";
 
-module.exports = {
-  TOKEN,
-  ALLOWED_GROUPS,
-  ALLOWED_USERS,
-  STICKER_SET_NAME
-};
 

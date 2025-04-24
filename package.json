@@ -1,10 +1,10 @@
 {
   "name": "telegram-bot",
   "version": "1.0.0",
-  "main": "bot.ts",
+  "type": "module", 
+  "main": "src/bot.js",
   "scripts": {
-    "start": "ts-node src/bot.js",
-    "build": "tsc"
+    "start": "node src/bot.js"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

@@ -1,7 +1,7 @@
-const { Telegraf } = require('telegraf');
-const { TOKEN } = require('./config');
-const { checkAccess } = require('./accessControl');
-const { addSticker } = require('./stickers');
+import { Telegraf } from 'telegraf';
+import { TOKEN } from './config.js';
+import { checkAccess } from './accessControl.js';
+import { addSticker } from './stickers.js';
 
 // 🔹 Ваші стікери
 const sticker1 = 'CAACAgIAAxkBAAMCaAkxe37R0wfzjzS5HN6teIykMWQAAhJ2AAK0rDBIZx7yQpFv-5k2BA';

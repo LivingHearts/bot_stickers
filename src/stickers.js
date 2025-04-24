@@ -1,6 +1,6 @@
-const { STICKER_SET_NAME } = require('./config');
+import { STICKER_SET_NAME } from './config.js';
 
-const addSticker = (ctx) => {
+export const addSticker = (ctx) => {
   const message = ctx.message;
 
   if (!message || !('sticker' in message)) {
@@ -28,6 +28,6 @@ const addSticker = (ctx) => {
     });
 };
 
-module.exports = {
+export default {
   addSticker
 };
