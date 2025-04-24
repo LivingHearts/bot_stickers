@@ -93,22 +93,22 @@ bot.start((ctx: Context) => {
   });
 
 // Обробник натискання на кнопки
-bot.action('sticker_1', (ctx: Context) => {
+bot.action('sticker_1', async (ctx: Context) => {
+  await ctx.answerCbQuery(); // Закриває кнопку після натискання
   if (!checkAccess(ctx)) return;
-  ctx.replyWithSticker(sticker1, {protect_content: true}); // Відправка першого стікера
-  ctx.answerCbQuery(); // Закриває кнопку після натискання
+  await ctx.replyWithSticker(sticker1, {protect_content: true}); // Відправка першого стікера
 });
 
-bot.action('sticker_2', (ctx: Context) => {
+bot.action('sticker_2', async (ctx: Context) => {
+  await ctx.answerCbQuery(); // Закриває кнопку після натискання
   if (!checkAccess(ctx)) return;
-  ctx.replyWithSticker(sticker2, {protect_content: true}); // Відправка другого стікера
-  ctx.answerCbQuery(); // Закриває кнопку після натискання
+  await ctx.replyWithSticker(sticker2, {protect_content: true}); // Відправка другого стікера
 });
 
-bot.action('sticker_3', (ctx: Context) => {
+bot.action('sticker_3', async (ctx: Context) => {
+  await ctx.answerCbQuery(); // Закриває кнопку після натискання
   if (!checkAccess(ctx)) return;
-  ctx.replyWithSticker(sticker3, {protect_content: true}); // Відправка третього стікера
-  ctx.answerCbQuery(); // Закриває кнопку після натискання
+  await ctx.replyWithSticker(sticker3, {protect_content: true}); // Відправка третього стікера
 });
 
 // Обробник для стікерів
