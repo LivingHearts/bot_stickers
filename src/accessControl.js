@@ -1,20 +1,19 @@
-import { Context } from 'telegraf';
-import { ALLOWED_GROUPS, ALLOWED_USERS } from './config';
+const { ALLOWED_GROUPS, ALLOWED_USERS } = require('./config');
 
-export const isUserAllowed = (userId: number): boolean => {
+const isUserAllowed = (userId) => {
   return ALLOWED_USERS.includes(userId);
 };
 
-export const isGroupAllowed = (groupId: number): boolean => {
+const isGroupAllowed = (groupId) => {
   return ALLOWED_GROUPS.includes(groupId);
 };
 
-export const checkAccess = (ctx: Context): boolean => {
+const checkAccess = (ctx) => {
   const userId = ctx.from?.id;
   const chatId = ctx.chat?.id;
   const chatType = ctx.chat?.type;
 
-  const message = ctx.message as any;
+  const message = ctx.message;
   const isForwarded = !!message?.forward_from || !!message?.forward_from_chat;
 
   const forwardedUserId = message?.forward_from?.id;
@@ -64,4 +63,10 @@ export const checkAccess = (ctx: Context): boolean => {
 
   ctx.reply?.('❌ Бот не підтримує цей тип чату.');
   return false;
+};
+
+module.exports = {
+  isUserAllowed,
+  isGroupAllowed,
+  checkAccess
 };
