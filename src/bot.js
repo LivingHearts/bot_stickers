@@ -27,11 +27,6 @@ bot.start((ctx) => {
   });
 });
 
-// 🔹 /help
-bot.help((ctx) => {
-  ctx.reply('Для додавання стікерів в групу надішліть їх тут!');
-});
-
 // 🔹 /stickers
 bot.command('stickers', async (ctx) => {
   await ctx.reply('Оберіть стікер для надсилання:', {
@@ -103,5 +98,7 @@ bot.launch().then(() => {
 });
 
 // 🔹 Обробка зупинки
+bot.stop('stop', () => {
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));
+})
