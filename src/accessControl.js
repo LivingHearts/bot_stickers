@@ -47,7 +47,7 @@ export const checkAccess = (ctx) => {
   }
 
   // ✅ Групи та супергрупи
-  if (chatType === 'group' || chatType === 'supergroup') {
+  if (chatType === 'group') {
     if (!isGroupAllowed(chatId)) {
       ctx.reply?.('🚫 Ця група не має доступу до бота.');
       return false;
