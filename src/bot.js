@@ -2,11 +2,10 @@ import { Telegraf } from 'telegraf';
 import { TOKEN } from './config.js';
 import { checkAccess } from './accessControl.js';
 import { addSticker } from './stickers.js';
-import img from '../img/living.jpg';
 
 // 🔹 Ваші стікери
 const sticker1 = 'CAACAgIAAxkBAAMCaAkxe37R0wfzjzS5HN6teIykMWQAAhJ2AAK0rDBIZx7yQpFv-5k2BA';
-const sticker2 = img;
+const sticker2 = 'CAACAgIAAxkBAAMCaAkxe37R0wfzjzS5HN6teIykMWQAAhJ2AAK0rDBIZx7yQpFv-5k2BA';
 const sticker3 = 'CAACAgIAAxkBAAMCaAkxe37R0wfzjzS5HN6teIykMWQAAhJ2AAK0rDBIZx7yQpFv-5k2BA';
 
 // 🔸 Ініціалізація бота
@@ -51,14 +50,14 @@ bot.command('sticker1', async (ctx) => {
   await ctx.replyWithSticker(sticker1, { protect_content: true });
 });
 
-bot.action('sticker_2', async (ctx) => {
-  await ctx.answerCbQuery();
+bot.command('sticker2', async (ctx) => {
+  // await ctx.answerCbQuery();
   if (!checkAccess(ctx)) return;
   await ctx.replyWithSticker(sticker2, { protect_content: true });
 });
 
-bot.action('sticker_3', async (ctx) => {
-  await ctx.answerCbQuery();
+bot.command('sticker3', async (ctx) => {
+  // await ctx.answerCbQuery();
   if (!checkAccess(ctx)) return;
   await ctx.replyWithSticker(sticker3, { protect_content: true });
 });
