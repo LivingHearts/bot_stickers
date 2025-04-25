@@ -14,17 +14,7 @@ const bot = new Telegraf(TOKEN);
 try {
   // 🔹 /start
 bot.start((ctx) => {
-  ctx.reply('Привіт! Вибери стікер, натиснувши одну з кнопок нижче:', {
-    protect_content: true,
-    reply_markup: {
-      inline_keyboard: [
-        [
-          { text: '😭 Стікер 1', callback_data: 'sticker_1' },
-          { text: '😭 Стікер 2', callback_data: 'sticker_2' },
-          { text: '😭 Стікер 3', callback_data: 'sticker_3' },
-        ]
-      ]
-    }
+  ctx.reply('Привіт! Ти можеш вибрати стікер для надсилання в меню.', {
   });
 });
 
