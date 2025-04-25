@@ -49,8 +49,8 @@ bot.command('stickers', async (ctx) => {
 });
 
 // 🔹 Кнопки
-bot.action('sticker_1', async (ctx) => {
-  await ctx.answerCbQuery();
+bot.command('sticker1', async (ctx) => {
+  // await ctx.answerCbQuery();
   if (!checkAccess(ctx)) return;
   await ctx.replyWithSticker(sticker1, { protect_content: true });
 });
